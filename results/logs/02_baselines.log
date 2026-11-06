@@ -1,0 +1,16 @@
+logistic_walch                   folds=31 macro_f1=0.540 kappa=0.298 wall=3s
+forest_walch                     folds=31 macro_f1=0.558 kappa=0.328 wall=193s
+mlp_walch                        folds=31 macro_f1=0.551 kappa=0.313 wall=55s
+logistic_local                   folds=31 macro_f1=0.477 kappa=0.226 wall=1s
+forest_local                     folds=31 macro_f1=0.581 kappa=0.355 wall=269s
+mlp_local                        folds=31 macro_f1=0.578 kappa=0.330 wall=51s
+logistic_all                     folds=31 macro_f1=0.575 kappa=0.355 wall=2s
+forest_all                       folds=31 macro_f1=0.611 kappa=0.404 wall=504s
+mlp_all                          folds=31 macro_f1=0.591 kappa=0.373 wall=99s
+
+Best baseline by inner CV: forest_all (macro F1 0.610)
+
+logistic_all_no_low_coverage     folds=30 macro_f1=0.575 kappa=0.358 wall=4s
+forest_all_no_low_coverage       folds=30 macro_f1=0.608 kappa=0.387 wall=466s
+mlp_all_no_low_coverage          folds=30 macro_f1=0.588 kappa=0.378 wall=50s
+forest_all_no_low_rate           folds=29 macro_f1=0.613 kappa=0.409 wall=360s

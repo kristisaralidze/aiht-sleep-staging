@@ -1,0 +1,53 @@
+# Leave-one-subject-out baselines and context baselines (scripts 02 and 03).
+seed: 42
+epoch_s: 30
+
+paths:
+  processed_dir: data/processed
+  predictions_dir: results/predictions
+  tables_dir: results/tables
+  figures_dir: results/figures
+  logs_dir: results/logs
+
+loso:
+  n_inner: 5     # inner folds, grouped by subject, training subjects only
+  n_jobs: 8      # outer folds run in parallel, one thread each
+
+feature_sets:
+  # Walch's motion + HR + clock proxy. Counts and HR pool +/-285 s around the epoch.
+  walch: [count_walch, hr_walch, cosine]
+  # Computed inside the epoch only (plus the clock proxy): no neighbouring context.
+  local: [count_epoch, hr_mean_z, hr_std_epoch, cosine]
+  all: [count_walch, count_epoch, hr_walch, hr_mean_z, hr_std_epoch, cosine, time_hours]
+
+models:
+  logistic:
+    fixed: {}
+    grid:
+      C: [0.01, 0.1, 1.0, 10.0]
+  forest:
+    fixed:
+      n_estimators: 100
+    grid:
+      max_depth: [6, 10]
+      min_samples_leaf: [8, 32]
+      max_features: [1.0, sqrt]
+  mlp:
+    fixed:
+      lr: 0.001
+      max_epochs: 100
+      patience: 10
+      batch_size: 256
+      val_fraction: 0.15
+    grid:
+      hidden: [[15, 15, 15], [32, 32]]
+      weight_decay: [0.0001, 0.01]
+
+context:
+  k_grid: [0, 1, 2, 5, 10]
+  emission_weights: [0.25, 0.5, 1.0, 2.0]
+  pseudocount: 1.0
+
+sensitivity:
+  low_coverage: ["7749105"]              # motion stops 1.1 h into the night
+  low_rate: ["5383425", "8258170"]       # 10 Hz accelerometer

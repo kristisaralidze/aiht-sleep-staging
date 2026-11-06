@@ -1,0 +1,84 @@
+{
+  "finished_utc": "2026-11-06T13:13:06+00:00",
+  "seed": 42,
+  "config": {
+    "seed": 42,
+    "paths": {
+      "raw_dir": "data/raw",
+      "processed_dir": "data/processed",
+      "tables_dir": "results/tables",
+      "logs_dir": "results/logs"
+    },
+    "features": {
+      "epoch_s": 30,
+      "counts": {
+        "fs_hz": 50,
+        "band_hz": [
+          3.0,
+          11.0
+        ],
+        "filter_order": 5,
+        "n_bins": 128,
+        "bin_range": [
+          0.0,
+          5.0
+        ],
+        "count_seconds": 15,
+        "offset": 18.0,
+        "scale": 3.07
+      },
+      "heart": {
+        "dog_sigmas_s": [
+          120.0,
+          600.0
+        ],
+        "dog_scalar": 0.75,
+        "dog_points": 285,
+        "norm_percentile": 90.0
+      },
+      "window": {
+        "half_width_s": 285,
+        "count_sigma_s": 50.0
+      },
+      "clock": {
+        "shift_hours": 5.0
+      }
+    }
+  },
+  "python": "3.9.6",
+  "numpy": "2.0.2",
+  "n_subjects": 31,
+  "subjects": [
+    "1066528",
+    "1360686",
+    "1449548",
+    "1455390",
+    "1818471",
+    "2598705",
+    "2638030",
+    "3509524",
+    "3997827",
+    "4018081",
+    "4314139",
+    "4426783",
+    "46343",
+    "5132496",
+    "5383425",
+    "5498603",
+    "5797046",
+    "6220552",
+    "759667",
+    "7749105",
+    "781756",
+    "8000685",
+    "8173033",
+    "8258170",
+    "844359",
+    "8530312",
+    "8686948",
+    "8692923",
+    "9106476",
+    "9618981",
+    "9961348"
+  ]
+}

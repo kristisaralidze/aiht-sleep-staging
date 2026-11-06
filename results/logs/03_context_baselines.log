@@ -1,0 +1,3 @@
+window_forest_local              folds=31 macro_f1=0.621 kappa=0.414 wall=300s
+window_forest_all                folds=31 macro_f1=0.653 kappa=0.470 wall=924s
+hmm_forest_all                   folds=31 macro_f1=0.639 kappa=0.457 wall=53s

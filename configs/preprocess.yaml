@@ -1,0 +1,38 @@
+# Preprocessing for sleep-accel, following Walch et al. 2019
+# (reference code: github.com/ojwalch/sleep_classifiers).
+seed: 42
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  tables_dir: results/tables
+  logs_dir: results/logs
+
+features:
+  epoch_s: 30
+
+  # Activity counts: te Lindert & Van Someren 2013, as used by Walch.
+  counts:
+    fs_hz: 50
+    band_hz: [3.0, 11.0]
+    filter_order: 5
+    n_bins: 128
+    bin_range: [0.0, 5.0]
+    count_seconds: 15
+    offset: 18.0
+    scale: 3.07
+
+  # Difference-of-Gaussians filter on heart rate, scaled per subject.
+  heart:
+    dog_sigmas_s: [120.0, 600.0]
+    dog_scalar: 0.75
+    dog_points: 285
+    norm_percentile: 90.0
+
+  # Walch features use a window of +/- this many seconds around each epoch.
+  window:
+    half_width_s: 285
+    count_sigma_s: 50.0
+
+  clock:
+    shift_hours: 5.0
