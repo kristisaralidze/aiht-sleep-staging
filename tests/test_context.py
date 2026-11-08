@@ -69,3 +69,23 @@ def test_windowed_model_ignores_held_out_labels(subjs):
                            seed=1, n_inner=2)
     assert first.params == second.params
     np.testing.assert_array_equal(first.proba, second.proba)
+
+
+def test_interior_mask_drops_epochs_near_night_edges():
+    times = np.arange(10) * 30.0
+    mask = context.interior_mask(times, 30, 2)
+    np.testing.assert_array_equal(mask, [0, 0, 1, 1, 1, 1, 1, 1, 0, 0])
+
+
+def test_interior_mask_drops_epochs_near_sequence_breaks():
+    times = np.array([0, 30, 60, 90, 120, 900, 930, 960, 990, 1020]) * 1.0
+    mask = context.interior_mask(times, 30, 2)
+    np.testing.assert_array_equal(mask, [0, 0, 1, 0, 0, 0, 0, 1, 0, 0])
+
+
+def test_interior_mask_is_empty_for_a_segment_shorter_than_the_window():
+    assert not context.interior_mask(np.arange(5) * 30.0, 30, 3).any()
+
+
+def test_interior_mask_keeps_everything_for_k_zero():
+    assert context.interior_mask(np.array([0.0, 30.0, 300.0]), 30, 0).all()

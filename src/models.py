@@ -23,7 +23,7 @@ from src.metrics import CLASSES
 Params = Dict[str, Any]
 
 
-def _check_all_classes(y: np.ndarray) -> None:
+def check_all_classes(y: np.ndarray) -> None:
     missing = sorted(set(CLASSES) - set(np.unique(y).tolist()))
     if missing:
         raise ValueError(f"Training data is missing class codes {missing}")
@@ -43,7 +43,7 @@ class TabularModel:
 
     def fit(self, subjs: Sequence[SubjectData]) -> "TabularModel":
         X, y = stack(subjs)
-        _check_all_classes(y)
+        check_all_classes(y)
         self.classifier.fit(self.scaler.fit_transform(X), y)
         return self
 
@@ -100,7 +100,7 @@ class TorchMlp:
         params = self.params
         fit_part, val_part = split_for_early_stopping(subjs, params["val_fraction"], self.seed)
         X, y = stack(fit_part)
-        _check_all_classes(y)
+        check_all_classes(y)
         self.scaler.fit(X)
         inputs, targets = self._tensors(fit_part)
         val_inputs, val_targets = self._tensors(val_part)

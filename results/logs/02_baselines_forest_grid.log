@@ -1,0 +1,8 @@
+forest_walch                     folds=31 macro_f1=0.553 kappa=0.313 wall=297s
+forest_local                     folds=31 macro_f1=0.584 kappa=0.359 wall=443s
+forest_all                       folds=31 macro_f1=0.620 kappa=0.412 wall=564s
+
+Best baseline by inner CV: forest_all (macro F1 0.619)
+
+forest_all_no_low_coverage       folds=30 macro_f1=0.618 kappa=0.396 wall=551s
+forest_all_no_low_rate           folds=29 macro_f1=0.620 kappa=0.413 wall=498s

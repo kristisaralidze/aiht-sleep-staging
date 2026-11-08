@@ -24,6 +24,8 @@ bash scripts/00_download_data.sh      # Walch et al. 2019, PhysioNet sleep-accel
 | 4 | `python scripts/04_gru.py` | Table 2 (GRU rows), `results/predictions/gru_*.csv` |
 | 5 | `python scripts/05_ablations.py` | Table 3: `results/tables/ablations.csv` |
 | 6 | `python scripts/06_figures.py` | Fig. 1-3: `results/figures/` |
+| 7 | `python scripts/07_stats.py` | `results/tables/stats.csv` (paired per-subject kappa tests) |
+| 8 | `python scripts/08_edge_check.py` | `results/tables/edge_check.csv` (window gain without edge epochs) |
 
 All experiments use leave-one-subject-out evaluation; hyperparameters are tuned inside each training fold only. Logs of the full run are in `results/logs/`. Exact package versions are in `results/logs/env.txt`, compute per run in `results/logs/timing.csv`. Run the tests with `python -m pytest`.
 

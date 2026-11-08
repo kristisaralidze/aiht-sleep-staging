@@ -1,10 +1,10 @@
 run,model,feature_set,mean_inner_macro_f1,selected
-forest_all,forest,all,0.6095313140171348,True
+forest_all,forest,all,0.6189067705263102,True
 mlp_all,mlp,all,0.5917748630544566,False
-forest_local,forest,local,0.5824178975421029,False
+forest_local,forest,local,0.5829729326107607,False
 logistic_all,logistic,all,0.573051849883945,False
 mlp_local,mlp,local,0.5716648500889767,False
-forest_walch,forest,walch,0.5584250701966154,False
+forest_walch,forest,walch,0.5598293052645357,False
 mlp_walch,mlp,walch,0.5520237218294949,False
 logistic_walch,logistic,walch,0.537712323237978,False
-logistic_local,logistic,local,0.47744678281257646,False
+logistic_local,logistic,local,0.4774467828125764,False

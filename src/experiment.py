@@ -53,3 +53,15 @@ def model_grid(model_config: Dict[str, Any]) -> List[Dict[str, Any]]:
 def baseline_spec(name: str, model: str, config: Dict[str, Any]) -> loso.ModelSpec:
     return loso.ModelSpec(name=name, build=models.BUILDERS[model],
                           grid=model_grid(config["models"][model]))
+
+
+def sensitivity_rows(experiment: Experiment, spec: loso.ModelSpec, model: str, feature_set: str,
+                     excluded: Sequence[str], full: loso.LosoResult) -> List[Dict[str, Any]]:
+    """Retrain without `excluded`, and score the full run on the same subjects."""
+    subjs = experiment.subjs(feature_set, exclude=excluded)
+    _, retrained, _ = experiment.run(spec, subjs)
+    kept = [subj.subject_id for subj in subjs]
+    same_subjects, _ = reporting.evaluate(full, only_subjects=kept)
+    label = {"excluded": "+".join(excluded), "model": model, "feature_set": feature_set}
+    return [{**label, "training": "retrained without excluded", **retrained},
+            {**label, "training": "full run, same test subjects", **same_subjects}]

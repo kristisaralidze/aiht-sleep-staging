@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from typing import Any, Dict, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import matplotlib
 
@@ -88,6 +88,17 @@ def save_confusion_figure(result: LosoResult, out_dir: Path) -> None:
     for extension in ("pdf", "png"):
         figure.savefig(out_dir / f"confusion_{result.name}.{extension}", dpi=200)
     plt.close(figure)
+
+
+def upsert_rows(path: Path, new: pd.DataFrame, keys: List[str]) -> pd.DataFrame:
+    """Replace rows of a saved table that match `new` on `keys`, and save it."""
+    path = Path(path)
+    if path.exists():
+        old = pd.read_csv(path, dtype={"subject": str})
+        replaced = old.set_index(keys).index.isin(new.set_index(keys).index)
+        new = pd.concat([old[~replaced], new], ignore_index=True)
+    new.to_csv(path, index=False)
+    return new
 
 
 def log_timing(result: LosoResult, path: Path, script: str) -> None:

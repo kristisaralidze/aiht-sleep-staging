@@ -25,11 +25,13 @@ from src.utils import load_config, set_seed, write_env_file, write_run_log  # no
 
 REQUIRED = ("seed", "paths", "epoch_s", "loso", "feature_sets", "models", "context")
 LOCAL_SET = "local"
+RUNS = ("window_local", "window_best", "hmm")
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--config", type=Path, default=ROOT / "configs" / "baselines.yaml")
+    parser.add_argument("--only", nargs="+", choices=RUNS, help="re-run these, keep other rows")
     return parser.parse_args()
 
 
@@ -38,7 +40,7 @@ def window_spec(model, feature_set, experiment):
     return loso.ModelSpec(
         name=f"window_{model}_{feature_set}",
         build=partial(context.build_windowed, models.BUILDERS[model]),
-        grid=[{"k": k} for k in experiment.config["context"]["k_grid"]],
+        grid=[{"k": k} for k in experiment.config["context"]["k_grid"][feature_set]],
         fold_params=reporting.load_fold_params(f"{model}_{feature_set}",
                                                experiment.paths["logs_dir"]),
     )
@@ -80,22 +82,27 @@ def main():
     best = selection[selection["selected"]].iloc[0]
     model = best["model"]
 
+    jobs = {
+        "window_local": (window_spec(model, LOCAL_SET, experiment), LOCAL_SET, "window +/-k"),
+        "window_best": (window_spec(model, best["feature_set"], experiment), best["feature_set"],
+                        "window +/-k"),
+        "hmm": (hmm_spec(best, experiment), best["feature_set"], "HMM"),
+    }
+    if best["feature_set"] == LOCAL_SET:
+        del jobs["window_best"]
     rows = []
     per_subject = []
-    for feature_set in dict.fromkeys((LOCAL_SET, best["feature_set"])):
-        _, row, subject_rows = experiment.run(window_spec(model, feature_set, experiment),
-                                              experiment.subjs(feature_set))
-        rows.append({"model": model, "feature_set": feature_set, "context": "window +/-k", **row})
+    for name in args.only or list(jobs):
+        spec, feature_set, label = jobs[name]
+        _, row, subject_rows = experiment.run(spec, experiment.subjs(feature_set))
+        rows.append({"model": model, "feature_set": feature_set, "context": label, **row})
         per_subject.append(subject_rows)
 
-    _, row, subject_rows = experiment.run(hmm_spec(best, experiment),
-                                          experiment.subjs(best["feature_set"]))
-    rows.append({"model": model, "feature_set": best["feature_set"], "context": "HMM", **row})
-    per_subject.append(subject_rows)
-
-    table = pd.concat([reference_rows(best, paths["tables_dir"]), pd.DataFrame(rows)])
-    table.to_csv(paths["tables_dir"] / "context.csv", index=False)
-    pd.concat(per_subject).to_csv(paths["tables_dir"] / "context_per_subject.csv", index=False)
+    tables_dir = paths["tables_dir"]
+    table = pd.concat([reference_rows(best, tables_dir), pd.DataFrame(rows)])
+    reporting.upsert_rows(tables_dir / "context.csv", table, ["run"])
+    reporting.upsert_rows(tables_dir / "context_per_subject.csv", pd.concat(per_subject),
+                          ["run", "subject"])
     write_run_log(paths["logs_dir"] / "03_context_baselines.json", config,
                   {"best_baseline": best["run"]})
 

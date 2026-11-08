@@ -28,10 +28,17 @@ models:
   forest:
     fixed:
       n_estimators: 100
+    # New values use sqrt only: 1.0 is the slow option and won 2 of 31 folds.
     grid:
-      max_depth: [6, 10]
-      min_samples_leaf: [8, 32]
-      max_features: [1.0, sqrt]
+      - max_depth: [6, 10]
+        min_samples_leaf: [8, 32]
+        max_features: [1.0, sqrt]
+      - max_depth: [null]
+        min_samples_leaf: [1, 8, 32]
+        max_features: [sqrt]
+      - max_depth: [6, 10]
+        min_samples_leaf: [1]
+        max_features: [sqrt]
   mlp:
     fixed:
       lr: 0.001
@@ -44,7 +51,10 @@ models:
       weight_decay: [0.0001, 0.01]
 
 context:
-  k_grid: [0, 1, 2, 5, 10]
+  # Per feature set. all was extended once to +/-30 min and is not extended further.
+  k_grid:
+    local: [5, 10, 20, 30]
+    all: [30, 45, 60]
   emission_weights: [0.25, 0.5, 1.0, 2.0]
   pseudocount: 1.0
 

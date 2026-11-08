@@ -1,6 +1,6 @@
 {
   "run": "forest_walch",
-  "mean_inner_score": 0.5584250701966154,
+  "mean_inner_score": 0.5598293052645357,
   "folds": {
     "1066528": {
       "params": {
@@ -10,7 +10,7 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5601137936222793,
-      "seconds": 46.89
+      "seconds": 71.41
     },
     "1360686": {
       "params": {
@@ -20,27 +20,27 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5554380278134132,
-      "seconds": 46.6
+      "seconds": 70.62
     },
     "1449548": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5484444145866814,
-      "seconds": 47.15
+      "inner_score": 0.561437439108305,
+      "seconds": 71.29
     },
     "1455390": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.567010251178811,
-      "seconds": 47.04
+      "inner_score": 0.5685676821212159,
+      "seconds": 71.67
     },
     "1818471": {
       "params": {
@@ -50,37 +50,37 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.565765797695448,
-      "seconds": 46.46
+      "seconds": 70.72
     },
     "2598705": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5541815768671542,
-      "seconds": 46.99
+      "inner_score": 0.558374990870442,
+      "seconds": 70.92
     },
     "2638030": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5458773054135375,
-      "seconds": 46.59
+      "inner_score": 0.5467896380859988,
+      "seconds": 71.39
     },
     "3509524": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.55795706533531,
-      "seconds": 48.22
+      "inner_score": 0.5585986628532971,
+      "seconds": 72.72
     },
     "3997827": {
       "params": {
@@ -90,7 +90,7 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5567070231857553,
-      "seconds": 47.81
+      "seconds": 72.55
     },
     "4018081": {
       "params": {
@@ -100,17 +100,17 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5631278550123003,
-      "seconds": 48.95
+      "seconds": 74.45
     },
     "4314139": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5600924394356956,
-      "seconds": 48.08
+      "inner_score": 0.5631715258236638,
+      "seconds": 73.44
     },
     "4426783": {
       "params": {
@@ -120,7 +120,7 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5526302251518852,
-      "seconds": 48.2
+      "seconds": 73.19
     },
     "46343": {
       "params": {
@@ -130,27 +130,27 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.563886241951258,
-      "seconds": 49.17
+      "seconds": 74.38
     },
     "5132496": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5539079242272009,
-      "seconds": 49.51
+      "inner_score": 0.5572535532786085,
+      "seconds": 74.59
     },
     "5383425": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5557708103062382,
-      "seconds": 48.82
+      "inner_score": 0.5586982414098864,
+      "seconds": 73.73
     },
     "5498603": {
       "params": {
@@ -160,27 +160,27 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5585408982315764,
-      "seconds": 48.95
+      "seconds": 73.65
     },
     "5797046": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5593609956849205,
-      "seconds": 48.87
+      "inner_score": 0.5625878762758413,
+      "seconds": 75.5
     },
     "6220552": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5655477192500948,
-      "seconds": 48.21
+      "inner_score": 0.5656125262358862,
+      "seconds": 74.78
     },
     "759667": {
       "params": {
@@ -190,27 +190,27 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5598191726814906,
-      "seconds": 49.45
+      "seconds": 76.71
     },
     "7749105": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5496114960528713,
-      "seconds": 50.3
+      "inner_score": 0.5505535834986235,
+      "seconds": 78.26
     },
     "781756": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.557142353572337,
-      "seconds": 48.44
+      "inner_score": 0.5581360174321753,
+      "seconds": 74.75
     },
     "8000685": {
       "params": {
@@ -220,7 +220,7 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5616001370596005,
-      "seconds": 48.94
+      "seconds": 75.18
     },
     "8173033": {
       "params": {
@@ -230,17 +230,17 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.557489929392589,
-      "seconds": 49.11
+      "seconds": 75.87
     },
     "8258170": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5564006717015549,
-      "seconds": 48.93
+      "inner_score": 0.5592548218391137,
+      "seconds": 75.64
     },
     "844359": {
       "params": {
@@ -250,7 +250,7 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5600359928932654,
-      "seconds": 46.22
+      "seconds": 72.07
     },
     "8530312": {
       "params": {
@@ -260,7 +260,7 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5592952825263835,
-      "seconds": 46.26
+      "seconds": 72.85
     },
     "8686948": {
       "params": {
@@ -270,17 +270,17 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5610276903965498,
-      "seconds": 46.82
+      "seconds": 73.05
     },
     "8692923": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5632141198548224,
-      "seconds": 46.18
+      "inner_score": 0.5633019845108908,
+      "seconds": 72.83
     },
     "9106476": {
       "params": {
@@ -290,27 +290,27 @@
         "min_samples_leaf": 8
       },
       "inner_score": 0.5560909984057871,
-      "seconds": 46.09
+      "seconds": 72.9
     },
     "9618981": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5588576409107887,
-      "seconds": 46.37
+      "inner_score": 0.5617539350608257,
+      "seconds": 72.89
     },
     "9961348": {
       "params": {
         "n_estimators": 100,
         "max_depth": 10,
         "max_features": "sqrt",
-        "min_samples_leaf": 8
+        "min_samples_leaf": 1
       },
-      "inner_score": 0.5662313256974761,
-      "seconds": 46.57
+      "inner_score": 0.5690469187762502,
+      "seconds": 73.31
     }
   }
 }

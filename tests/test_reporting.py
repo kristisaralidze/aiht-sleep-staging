@@ -46,6 +46,31 @@ def test_inner_score_is_averaged_over_the_selected_subjects_only():
     assert row["mean_inner_macro_f1"] == 0.2
 
 
+def test_upsert_replaces_matching_rows_and_keeps_the_others(tmp_path):
+    path = tmp_path / "table.csv"
+    pd.DataFrame({"run": ["a", "b"], "score": [1, 2]}).to_csv(path, index=False)
+    new = pd.DataFrame({"run": ["b"], "score": [9]})
+    merged = reporting.upsert_rows(path, new, keys=["run"])
+    assert merged.set_index("run")["score"].to_dict() == {"a": 1, "b": 9}
+    assert pd.read_csv(path).equals(merged)
+
+
+def test_upsert_matches_on_all_keys(tmp_path):
+    path = tmp_path / "table.csv"
+    old = pd.DataFrame({"excluded": ["x", "y"], "model": ["m", "m"], "score": [1, 2]})
+    old.to_csv(path, index=False)
+    new = pd.DataFrame({"excluded": ["x"], "model": ["m"], "score": [9]})
+    merged = reporting.upsert_rows(path, new, keys=["excluded", "model"])
+    assert sorted(merged["score"]) == [2, 9]
+
+
+def test_upsert_creates_a_missing_table(tmp_path):
+    path = tmp_path / "table.csv"
+    new = pd.DataFrame({"run": ["a"], "score": [1]})
+    assert len(reporting.upsert_rows(path, new, keys=["run"])) == 1
+    assert path.exists()
+
+
 def test_confusion_figure_written_as_pdf_and_png(tmp_path):
     reporting.save_confusion_figure(_result(), tmp_path)
     assert (tmp_path / "confusion_run.pdf").stat().st_size > 0

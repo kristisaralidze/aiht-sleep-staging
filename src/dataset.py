@@ -52,11 +52,16 @@ def load_subjects(processed_dir: Path, feature_names: Sequence[str], epoch_s: in
             if path.stem not in set(exclude)]
 
 
+def bounds_from_times(epoch_times: np.ndarray, epoch_s: int) -> List[Tuple[int, int]]:
+    """Return [start, stop) index pairs of runs of time-adjacent epochs."""
+    breaks = np.flatnonzero(np.diff(epoch_times) > epoch_s) + 1
+    edges = [0, *breaks.tolist(), epoch_times.size]
+    return list(zip(edges[:-1], edges[1:]))
+
+
 def segment_bounds(subj: SubjectData) -> List[Tuple[int, int]]:
     """Return [start, stop) index pairs of runs of time-adjacent epochs."""
-    breaks = np.flatnonzero(np.diff(subj.epoch_times) > subj.epoch_s) + 1
-    edges = [0, *breaks.tolist(), subj.epoch_times.size]
-    return list(zip(edges[:-1], edges[1:]))
+    return bounds_from_times(subj.epoch_times, subj.epoch_s)
 
 
 def stack(subjs: Sequence[SubjectData]) -> Tuple[np.ndarray, np.ndarray]:

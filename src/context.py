@@ -6,7 +6,7 @@ from typing import Any, Callable, Dict, Sequence
 
 import numpy as np
 
-from src.dataset import SubjectData, segment_bounds
+from src.dataset import SubjectData, bounds_from_times, segment_bounds
 
 TIME_GROUP = "time"
 
@@ -46,6 +46,14 @@ def window_subject(subj: SubjectData, k: int) -> SubjectData:
             groups.append(group)
     return replace(subj, features=np.hstack(blocks), feature_names=tuple(names),
                    feature_groups=tuple(groups))
+
+
+def interior_mask(epoch_times: np.ndarray, epoch_s: int, k: int) -> np.ndarray:
+    """True for epochs whose +/-k window stays inside their segment."""
+    mask = np.zeros(epoch_times.size, dtype=bool)
+    for start, stop in bounds_from_times(epoch_times, epoch_s):
+        mask[start + k:stop - k] = True
+    return mask
 
 
 class WindowedModel:

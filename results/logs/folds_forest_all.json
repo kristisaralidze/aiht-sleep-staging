@@ -1,316 +1,316 @@
 {
   "run": "forest_all",
-  "mean_inner_score": 0.6095313140171348,
+  "mean_inner_score": 0.6189067705263102,
   "folds": {
     "1066528": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6058469607346711,
-      "seconds": 95.36
+      "inner_score": 0.6157365402272839,
+      "seconds": 141.04
     },
     "1360686": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6013601689034812,
-      "seconds": 95.78
+      "inner_score": 0.6141217556214738,
+      "seconds": 140.46
     },
     "1449548": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6022605575464253,
-      "seconds": 96.71
+      "inner_score": 0.6136086562533363,
+      "seconds": 139.66
     },
     "1455390": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6204518717033817,
-      "seconds": 96.36
+      "inner_score": 0.6297953976782232,
+      "seconds": 140.84
     },
     "1818471": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6119562728440916,
-      "seconds": 95.59
+      "inner_score": 0.6203061143595481,
+      "seconds": 140.26
     },
     "2598705": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6086309273503586,
-      "seconds": 95.42
+      "inner_score": 0.6167407892627205,
+      "seconds": 140.25
     },
     "2638030": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6051143789657614,
-      "seconds": 96.19
+      "inner_score": 0.609806076301086,
+      "seconds": 141.3
     },
     "3509524": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6138095316650757,
-      "seconds": 98.41
+      "inner_score": 0.6250117168547898,
+      "seconds": 143.74
     },
     "3997827": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.612194597321574,
-      "seconds": 95.04
+      "inner_score": 0.6192649381685619,
+      "seconds": 140.53
     },
     "4018081": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6133051409604392,
-      "seconds": 97.13
+      "inner_score": 0.6218357171773068,
+      "seconds": 143.16
     },
     "4314139": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6103363832994185,
-      "seconds": 95.89
+      "inner_score": 0.6235256639263571,
+      "seconds": 141.06
     },
     "4426783": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
-        "max_features": 1.0,
+        "max_depth": null,
+        "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.600332384405971,
-      "seconds": 98.86
+      "inner_score": 0.6108658922997257,
+      "seconds": 139.96
     },
     "46343": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6166093511972673,
-      "seconds": 97.26
+      "inner_score": 0.6242177447587077,
+      "seconds": 142.66
     },
     "5132496": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.604721493577761,
-      "seconds": 98.13
+      "inner_score": 0.6140401816249753,
+      "seconds": 143.84
     },
     "5383425": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6123183879713013,
-      "seconds": 97.17
+      "inner_score": 0.6250935819542616,
+      "seconds": 140.89
     },
     "5498603": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6123656540457668,
-      "seconds": 96.93
+      "inner_score": 0.6242341316523059,
+      "seconds": 142.14
     },
     "5797046": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6155051597897224,
-      "seconds": 106.74
+      "inner_score": 0.6249596878303055,
+      "seconds": 141.66
     },
     "6220552": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6183706003406318,
-      "seconds": 108.14
+      "inner_score": 0.6209312660360987,
+      "seconds": 140.65
     },
     "759667": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
-        "max_features": 1.0,
+        "max_depth": null,
+        "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6056827778212878,
-      "seconds": 119.76
+      "inner_score": 0.61716588671249,
+      "seconds": 143.36
     },
     "7749105": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6045227672434127,
-      "seconds": 116.63
+      "inner_score": 0.6133034245523635,
+      "seconds": 144.07
     },
     "781756": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6101972668986543,
-      "seconds": 112.44
+      "inner_score": 0.6221381003306621,
+      "seconds": 140.39
     },
     "8000685": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6090357406912424,
-      "seconds": 112.23
+      "inner_score": 0.618577982780742,
+      "seconds": 139.99
     },
     "8173033": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6081069365589445,
-      "seconds": 111.94
+      "inner_score": 0.6156659588925028,
+      "seconds": 141.37
     },
     "8258170": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6024010482543032,
-      "seconds": 113.02
+      "inner_score": 0.6154965401877917,
+      "seconds": 139.85
     },
     "844359": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6097930546767008,
-      "seconds": 196.21
+      "inner_score": 0.620933614523239,
+      "seconds": 137.27
     },
     "8530312": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.5985483959661702,
-      "seconds": 194.92
+      "inner_score": 0.6082261819665981,
+      "seconds": 135.61
     },
     "8686948": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6105739021058726,
-      "seconds": 195.78
+      "inner_score": 0.6207531834052703,
+      "seconds": 136.43
     },
     "8692923": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6127723843558776,
-      "seconds": 194.15
+      "inner_score": 0.6189941374001743,
+      "seconds": 136.86
     },
     "9106476": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6167275847027449,
-      "seconds": 194.6
+      "inner_score": 0.622625885951429,
+      "seconds": 136.8
     },
     "9618981": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6057703643754629,
-      "seconds": 194.68
+      "inner_score": 0.6169231894975334,
+      "seconds": 136.65
     },
     "9961348": {
       "params": {
         "n_estimators": 100,
-        "max_depth": 10,
+        "max_depth": null,
         "max_features": "sqrt",
         "min_samples_leaf": 8
       },
-      "inner_score": 0.6158486882574027,
-      "seconds": 194.02
+      "inner_score": 0.621209948127751,
+      "seconds": 137.49
     }
   }
 }

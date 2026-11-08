@@ -1,5 +1,5 @@
 {
-  "finished_utc": "2026-11-06T13:07:36+00:00",
+  "finished_utc": "2026-11-08T11:56:30+00:00",
   "seed": 42,
   "config": {
     "seed": 42,
@@ -53,20 +53,47 @@
         "fixed": {
           "n_estimators": 100
         },
-        "grid": {
-          "max_depth": [
-            6,
-            10
-          ],
-          "min_samples_leaf": [
-            8,
-            32
-          ],
-          "max_features": [
-            1.0,
-            "sqrt"
-          ]
-        }
+        "grid": [
+          {
+            "max_depth": [
+              6,
+              10
+            ],
+            "min_samples_leaf": [
+              8,
+              32
+            ],
+            "max_features": [
+              1.0,
+              "sqrt"
+            ]
+          },
+          {
+            "max_depth": [
+              null
+            ],
+            "min_samples_leaf": [
+              1,
+              8,
+              32
+            ],
+            "max_features": [
+              "sqrt"
+            ]
+          },
+          {
+            "max_depth": [
+              6,
+              10
+            ],
+            "min_samples_leaf": [
+              1
+            ],
+            "max_features": [
+              "sqrt"
+            ]
+          }
+        ]
       },
       "mlp": {
         "fixed": {
@@ -96,13 +123,19 @@
       }
     },
     "context": {
-      "k_grid": [
-        0,
-        1,
-        2,
-        5,
-        10
-      ],
+      "k_grid": {
+        "local": [
+          5,
+          10,
+          20,
+          30
+        ],
+        "all": [
+          30,
+          45,
+          60
+        ]
+      },
       "emission_weights": [
         0.25,
         0.5,

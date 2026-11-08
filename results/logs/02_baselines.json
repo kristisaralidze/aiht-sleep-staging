@@ -1,5 +1,5 @@
 {
-  "finished_utc": "2026-11-06T12:46:15+00:00",
+  "finished_utc": "2026-11-06T14:02:06+00:00",
   "seed": 42,
   "config": {
     "seed": 42,
@@ -53,20 +53,47 @@
         "fixed": {
           "n_estimators": 100
         },
-        "grid": {
-          "max_depth": [
-            6,
-            10
-          ],
-          "min_samples_leaf": [
-            8,
-            32
-          ],
-          "max_features": [
-            1.0,
-            "sqrt"
-          ]
-        }
+        "grid": [
+          {
+            "max_depth": [
+              6,
+              10
+            ],
+            "min_samples_leaf": [
+              8,
+              32
+            ],
+            "max_features": [
+              1.0,
+              "sqrt"
+            ]
+          },
+          {
+            "max_depth": [
+              null
+            ],
+            "min_samples_leaf": [
+              1,
+              8,
+              32
+            ],
+            "max_features": [
+              "sqrt"
+            ]
+          },
+          {
+            "max_depth": [
+              6,
+              10
+            ],
+            "min_samples_leaf": [
+              1
+            ],
+            "max_features": [
+              "sqrt"
+            ]
+          }
+        ]
       },
       "mlp": {
         "fixed": {
@@ -97,11 +124,10 @@
     },
     "context": {
       "k_grid": [
-        0,
-        1,
-        2,
         5,
-        10
+        10,
+        20,
+        30
       ],
       "emission_weights": [
         0.25,
