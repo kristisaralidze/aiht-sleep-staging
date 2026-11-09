@@ -1,9 +1,5 @@
 """Per-epoch classifiers. Every model scales features and weights classes in `fit`.
-
-scikit-learn's MLPClassifier has no class weights (and 1.6.1 is the newest release
-for Python 3.9), so the MLP is a small PyTorch network with a weighted loss. It
-keeps Walch's (15, 15, 15) shape as a candidate. Logistic regression is multinomial
-L2 rather than Walch's one-vs-rest L1, as liblinear multiclass is deprecated.
+The MLP is a small PyTorch network because MLPClassifier has no class weights.
 """
 from __future__ import annotations
 

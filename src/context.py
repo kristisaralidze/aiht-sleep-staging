@@ -24,11 +24,7 @@ def _neighbour_indices(subj: SubjectData, k: int) -> np.ndarray:
 
 
 def window_subject(subj: SubjectData, k: int) -> SubjectData:
-    """Return a copy whose signal features span +/-k epochs within each segment.
-
-    Time features are kept once: neighbouring values add nothing to a clock.
-    Neighbours never cross a sequence break; the segment's edge is repeated instead.
-    """
+    """Copy with signal features spanning +/-k epochs within each segment."""
     if k == 0:
         return subj
     indices = _neighbour_indices(subj, k)

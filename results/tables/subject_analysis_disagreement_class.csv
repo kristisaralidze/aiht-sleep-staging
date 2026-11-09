@@ -1,0 +1,4 @@
+true_class,n_epochs,n_disagree,pct_disagree,window_forest_all_right,gru_all_right,both_wrong
+0,2167,436,20.11998154130134,44,315,77
+1,17795,3856,21.66900814835628,3225,427,204
+2,5545,1276,23.011722272317403,249,941,86

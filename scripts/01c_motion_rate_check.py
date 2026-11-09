@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 """Measure how accelerometer sampling rate affects activity counts.
 
-Comparing subjects confounds rate with behaviour, so the causal test thins each
-full-rate night to about 10 Hz and recomputes counts on identical movement.
-
-Outputs:
-    results/tables/motion_rate_by_subject.csv   count statistics and rate per subject
-    results/tables/motion_rate_thinning.csv     full-rate vs thinned counts
+Outputs: results/tables/motion_rate_by_subject.csv, motion_rate_thinning.csv
 """
 import sys
 from pathlib import Path

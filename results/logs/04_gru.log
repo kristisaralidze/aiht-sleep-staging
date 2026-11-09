@@ -1,0 +1,3 @@
+gru_all                          folds=31 macro_f1=0.657 kappa=0.488 wall=8057s
+gru_all_no_low_coverage          folds=30 macro_f1=0.653 kappa=0.483 wall=7302s
+gru_all_no_low_rate              folds=29 macro_f1=0.653 kappa=0.473 wall=5812s

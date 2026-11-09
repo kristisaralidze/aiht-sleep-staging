@@ -1,0 +1,186 @@
+{
+  "finished_utc": "2026-11-08T22:25:38+00:00",
+  "seed": 42,
+  "config": {
+    "seed": 42,
+    "epoch_s": 30,
+    "paths": {
+      "processed_dir": "data/processed",
+      "predictions_dir": "results/predictions",
+      "tables_dir": "results/tables",
+      "figures_dir": "results/figures",
+      "logs_dir": "results/logs"
+    },
+    "loso": {
+      "n_inner": 5,
+      "n_jobs": 8
+    },
+    "feature_sets": {
+      "walch": [
+        "count_walch",
+        "hr_walch",
+        "cosine"
+      ],
+      "local": [
+        "count_epoch",
+        "hr_mean_z",
+        "hr_std_epoch",
+        "cosine"
+      ],
+      "all": [
+        "count_walch",
+        "count_epoch",
+        "hr_walch",
+        "hr_mean_z",
+        "hr_std_epoch",
+        "cosine",
+        "time_hours"
+      ]
+    },
+    "models": {
+      "logistic": {
+        "fixed": {},
+        "grid": {
+          "C": [
+            0.01,
+            0.1,
+            1.0,
+            10.0
+          ]
+        }
+      },
+      "forest": {
+        "fixed": {
+          "n_estimators": 100
+        },
+        "grid": [
+          {
+            "max_depth": [
+              6,
+              10
+            ],
+            "min_samples_leaf": [
+              8,
+              32
+            ],
+            "max_features": [
+              1.0,
+              "sqrt"
+            ]
+          },
+          {
+            "max_depth": [
+              null
+            ],
+            "min_samples_leaf": [
+              1,
+              8,
+              32
+            ],
+            "max_features": [
+              "sqrt"
+            ]
+          },
+          {
+            "max_depth": [
+              6,
+              10
+            ],
+            "min_samples_leaf": [
+              1
+            ],
+            "max_features": [
+              "sqrt"
+            ]
+          }
+        ]
+      },
+      "mlp": {
+        "fixed": {
+          "lr": 0.001,
+          "max_epochs": 100,
+          "patience": 10,
+          "batch_size": 256,
+          "val_fraction": 0.15
+        },
+        "grid": {
+          "hidden": [
+            [
+              15,
+              15,
+              15
+            ],
+            [
+              32,
+              32
+            ]
+          ],
+          "weight_decay": [
+            0.0001,
+            0.01
+          ]
+        }
+      }
+    },
+    "context": {
+      "k_grid": {
+        "local": [
+          5,
+          10,
+          20,
+          30
+        ],
+        "all": [
+          30,
+          45,
+          60
+        ]
+      },
+      "emission_weights": [
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "pseudocount": 1.0
+    },
+    "sensitivity": {
+      "low_coverage": [
+        "7749105"
+      ],
+      "low_rate": [
+        "5383425",
+        "8258170"
+      ]
+    },
+    "gru": {
+      "feature_set": "all",
+      "model": {
+        "fixed": {
+          "layers": 1,
+          "input_dropout": 0.1,
+          "lr": 0.001,
+          "weight_decay": 0.0001,
+          "max_epochs": 150,
+          "patience": 20,
+          "batch_size": 4,
+          "val_fraction": 0.2
+        },
+        "grid": {
+          "hidden": [
+            32,
+            64,
+            128
+          ],
+          "dropout": [
+            0.3,
+            0.5
+          ]
+        }
+      }
+    }
+  },
+  "python": "3.9.6",
+  "numpy": "2.0.2",
+  "run": "gru_all"
+}

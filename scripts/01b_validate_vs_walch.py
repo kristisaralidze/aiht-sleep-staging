@@ -1,12 +1,5 @@
 #!/usr/bin/env python
-"""Compare our Walch features with the reference functions, on every subject.
-
-smooth_gauss, convolve_with_dog and max2epochs are taken from Walch's repository at
-a pinned commit, not copied here: that repository has no license. They are fetched
-into data/external/ (git-ignored), hash-checked, and only those functions are run.
-
-Each count comparison is made twice: with the reference's timestamps (spread by
-linspace) and with bin-centre timestamps, which isolates that one deliberate change.
+"""Compare our Walch features with Walch's reference functions on every subject.
 
 Output: results/tables/validate_vs_walch.csv
 """
@@ -63,7 +56,6 @@ def extract_functions(path, names):
     namespace = {"np": np}
     for node in ast.walk(ast.parse(source)):
         if isinstance(node, ast.FunctionDef) and node.name in names:
-            node.decorator_list = []
             exec(textwrap.dedent(ast.get_source_segment(source, node)), namespace)
     return {name: namespace[name] for name in names}
 

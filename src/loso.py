@@ -1,13 +1,5 @@
 """Leave-one-subject-out evaluation with tuning nested inside each training fold.
-
-Models see whole subjects, so the same loop serves tabular models and the GRU:
-
-    model = spec.build(params, seed).fit(training_subjects)
-    model.predict(subject); model.predict_proba(subject)
-
-The left-out subject is passed to `run_fold` separately and is only ever given
-to the final model's predict calls. Scaling, class weights, early stopping and
-HMM estimation all live inside `fit`, so they cannot see it either.
+The left-out subject only reaches the final model's predict calls.
 """
 from __future__ import annotations
 
@@ -88,11 +80,11 @@ def inner_folds(subjs: Sequence[SubjectData], n_splits: int,
             for train, val in splitter.split(np.arange(len(subjs)))]
 
 
-def tune(spec: ModelSpec, subjs: Sequence[SubjectData], fixed: Params, seed: int,
-         n_inner: int) -> TuneResult:
-    """Pick the grid candidate with the best pooled inner macro F1 (first wins ties)."""
+def inner_scores(spec: ModelSpec, subjs: Sequence[SubjectData], fixed: Params, seed: int,
+                 n_inner: int) -> List[TuneResult]:
+    """Pooled inner macro F1 of every grid candidate, in grid order."""
     folds = inner_folds(subjs, n_inner, seed)
-    best = TuneResult(params={}, score=-np.inf)
+    results = []
     for candidate in spec.grid:
         params = {**fixed, **candidate}
         true_parts, pred_parts = [], []
@@ -102,8 +94,17 @@ def tune(spec: ModelSpec, subjs: Sequence[SubjectData], fixed: Params, seed: int
                 true_parts.append(subj.labels)
                 pred_parts.append(model.predict(subj))
         score = metrics.macro_f1(np.concatenate(true_parts), np.concatenate(pred_parts))
-        if score > best.score:
-            best = TuneResult(params=params, score=score)
+        results.append(TuneResult(params=params, score=score))
+    return results
+
+
+def tune(spec: ModelSpec, subjs: Sequence[SubjectData], fixed: Params, seed: int,
+         n_inner: int) -> TuneResult:
+    """Pick the grid candidate with the best pooled inner macro F1 (first wins ties)."""
+    best = TuneResult(params={}, score=-np.inf)
+    for result in inner_scores(spec, subjs, fixed, seed, n_inner):
+        if result.score > best.score:
+            best = result
     if not np.isfinite(best.score):
         raise ValueError(f"No valid candidate while tuning {spec.name}")
     return best

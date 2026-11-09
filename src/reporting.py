@@ -75,7 +75,7 @@ def _panel(axis: Any, values: np.ndarray, text: Sequence[Sequence[str]], title: 
 
 
 def save_confusion_figure(result: LosoResult, out_dir: Path) -> None:
-    """Save the pooled confusion matrix, counts and row-normalised, as PDF and PNG."""
+    """Save the pooled confusion matrix, counts and row-normalised, as PNG."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     y_true = np.concatenate([fold.y_true for fold in result.folds])
@@ -85,8 +85,7 @@ def save_confusion_figure(result: LosoResult, out_dir: Path) -> None:
     _panel(axes[0], counts.astype(float), [[f"{v:,}" for v in row] for row in counts], "Epochs")
     _panel(axes[1], rates, [[f"{v:.0%}" for v in row] for row in rates], "Share of true class")
     figure.suptitle(result.name, fontsize=11)
-    for extension in ("pdf", "png"):
-        figure.savefig(out_dir / f"confusion_{result.name}.{extension}", dpi=200)
+    figure.savefig(out_dir / f"confusion_{result.name}.png", dpi=200)
     plt.close(figure)
 
 

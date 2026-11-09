@@ -1,15 +1,5 @@
-"""Evaluation metrics and the conventions used to report them.
-
-Conventions (decided for the report; every table follows them):
-
-- Headline per-class F1 and macro F1 are POOLED: predictions from all left-out
-  subjects are concatenated and scored once. Long nights therefore weigh more.
-- Cohen's kappa is reported as the PER-SUBJECT mean +/- SD (each subject scored
-  on their own night, SD with ddof=1). Pooled kappa is reported alongside it.
-- Per-subject REM F1 is averaged ONLY over subjects who have REM epochs. F1 for a
-  class absent from a subject's true labels is undefined, stored as NaN, and
-  skipped by the mean and SD. `n_subjects_rem` records how many subjects count.
-- Per-subject macro F1 averages the classes present in that subject's true labels.
+"""Evaluation metrics. Macro and per-class F1 are pooled; kappa is the per-subject mean.
+Per-subject F1 skips classes absent from that subject's labels.
 """
 from __future__ import annotations
 

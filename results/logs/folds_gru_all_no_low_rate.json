@@ -1,0 +1,296 @@
+{
+  "run": "gru_all_no_low_rate",
+  "mean_inner_score": NaN,
+  "folds": {
+    "1066528": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7001834460138876,
+        "stop_epoch": 48
+      },
+      "inner_score": NaN,
+      "seconds": 2027.13
+    },
+    "1360686": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7085772380213321,
+        "stop_epoch": 46
+      },
+      "inner_score": NaN,
+      "seconds": 1639.55
+    },
+    "1449548": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6598342318904437,
+        "stop_epoch": 25
+      },
+      "inner_score": NaN,
+      "seconds": 1258.16
+    },
+    "1455390": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7605745675630398,
+        "stop_epoch": 84
+      },
+      "inner_score": NaN,
+      "seconds": 1753.81
+    },
+    "1818471": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6918764716203715,
+        "stop_epoch": 53
+      },
+      "inner_score": NaN,
+      "seconds": 1688.3
+    },
+    "2598705": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.665207594474294,
+        "stop_epoch": 51
+      },
+      "inner_score": NaN,
+      "seconds": 1181.7
+    },
+    "2638030": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6653478322547001,
+        "stop_epoch": 107
+      },
+      "inner_score": NaN,
+      "seconds": 1764.1
+    },
+    "3509524": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6369068978059097,
+        "stop_epoch": 24
+      },
+      "inner_score": NaN,
+      "seconds": 1162.13
+    },
+    "3997827": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.5908454062052412,
+        "stop_epoch": 17
+      },
+      "inner_score": NaN,
+      "seconds": 1101.42
+    },
+    "4018081": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7363036207455521,
+        "stop_epoch": 45
+      },
+      "inner_score": NaN,
+      "seconds": 2139.84
+    },
+    "4314139": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6067250482871711,
+        "stop_epoch": 21
+      },
+      "inner_score": NaN,
+      "seconds": 958.04
+    },
+    "4426783": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7394697062825929,
+        "stop_epoch": 56
+      },
+      "inner_score": NaN,
+      "seconds": 1473.47
+    },
+    "46343": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.622705113217639,
+        "stop_epoch": 14
+      },
+      "inner_score": NaN,
+      "seconds": 1127.29
+    },
+    "5132496": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6459024908744505,
+        "stop_epoch": 32
+      },
+      "inner_score": NaN,
+      "seconds": 1527.72
+    },
+    "5498603": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6457291997302218,
+        "stop_epoch": 53
+      },
+      "inner_score": NaN,
+      "seconds": 1799.83
+    },
+    "5797046": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.692229357442001,
+        "stop_epoch": 64
+      },
+      "inner_score": NaN,
+      "seconds": 1475.52
+    },
+    "6220552": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6776734026538782,
+        "stop_epoch": 38
+      },
+      "inner_score": NaN,
+      "seconds": 1431.73
+    },
+    "759667": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6153234561238573,
+        "stop_epoch": 8
+      },
+      "inner_score": NaN,
+      "seconds": 763.87
+    },
+    "7749105": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6228551343174745,
+        "stop_epoch": 44
+      },
+      "inner_score": NaN,
+      "seconds": 1164.09
+    },
+    "781756": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.521790760919436,
+        "stop_epoch": 10
+      },
+      "inner_score": NaN,
+      "seconds": 849.22
+    },
+    "8000685": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7350983201778729,
+        "stop_epoch": 81
+      },
+      "inner_score": NaN,
+      "seconds": 1851.37
+    },
+    "8173033": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6431998812191909,
+        "stop_epoch": 14
+      },
+      "inner_score": NaN,
+      "seconds": 958.95
+    },
+    "844359": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.721328761440348,
+        "stop_epoch": 42
+      },
+      "inner_score": NaN,
+      "seconds": 1637.34
+    },
+    "8530312": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.5931135548287342,
+        "stop_epoch": 19
+      },
+      "inner_score": NaN,
+      "seconds": 1184.71
+    },
+    "8686948": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.688815288708871,
+        "stop_epoch": 75
+      },
+      "inner_score": NaN,
+      "seconds": 2246.25
+    },
+    "8692923": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.691252208293486,
+        "stop_epoch": 44
+      },
+      "inner_score": NaN,
+      "seconds": 1814.79
+    },
+    "9106476": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.761429364321457,
+        "stop_epoch": 49
+      },
+      "inner_score": NaN,
+      "seconds": 1892.39
+    },
+    "9618981": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6039882220652931,
+        "stop_epoch": 25
+      },
+      "inner_score": NaN,
+      "seconds": 872.84
+    },
+    "9961348": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6787335467108324,
+        "stop_epoch": 61
+      },
+      "inner_score": NaN,
+      "seconds": 1463.1
+    }
+  }
+}

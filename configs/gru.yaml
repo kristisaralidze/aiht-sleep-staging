@@ -1,0 +1,22 @@
+# Whole-night bidirectional GRU (script 04). Paths, LOSO settings and the
+# sensitivity subjects come from configs/baselines.yaml.
+#
+# Tuning: one fixed inner split per outer fold, 24 train / 6 validation subjects
+# (val_fraction 0.2 of the 30 training subjects). The 6 validation subjects pick
+# both the setting (best validation macro F1) and the stopping epoch, and the
+# selected model is kept without refitting. The forests used 5-fold inner CV
+# instead; for the GRU that would take about 5 times longer (about 9 h in total).
+feature_set: all
+model:
+  fixed:
+    layers: 1
+    input_dropout: 0.1
+    lr: 0.001
+    weight_decay: 0.0001
+    max_epochs: 150
+    patience: 20
+    batch_size: 4
+    val_fraction: 0.2
+  grid:
+    hidden: [32, 64, 128]
+    dropout: [0.3, 0.5]

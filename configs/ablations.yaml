@@ -1,0 +1,19 @@
+# Feature ablations (script 05). Paths, LOSO settings and model grids come from
+# configs/baselines.yaml; GRU fixed settings come from configs/gru.yaml.
+#
+# The "all" rows are the existing runs (forest_all, window_forest_all, gru_all)
+# and are not re-run. Two differences follow from that:
+# - window_forest_all was tuned over k {30, 45, 60}; the ablation runs use k {20, 30, 45}.
+# - gru_all chose hidden and dropout per fold from 6 settings. The ablation runs use
+#   no grid: hidden 64 and dropout 0.5, the pair gru_all chose most often (8 of 31
+#   folds; hidden 64 in 15, 128 in 12, 32 in 4). The fixed 24/6 inner split is
+#   used for early stopping only.
+feature_sets:
+  motion: [count_walch, count_epoch]
+  hr: [hr_walch, hr_mean_z, hr_std_epoch]
+  motion_hr: [count_walch, count_epoch, hr_walch, hr_mean_z, hr_std_epoch]
+reused_set: all
+k_grid: [20, 30, 45]
+gru:
+  hidden: 64
+  dropout: 0.5

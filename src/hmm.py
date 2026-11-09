@@ -1,17 +1,5 @@
 """Context baseline: HMM smoothing of a per-epoch model's probabilities.
-
-Hidden states are the three classes. Transitions come from the true label
-sequences of training subjects, counting only time-adjacent epochs. Decoding
-restarts at every sequence break, so no state is carried across missing data:
-a night starts from the first-epoch distribution, and a segment after a break
-from the overall class frequencies.
-
-Base models use balanced class weights, so their output approximates
-p(class | x) under a uniform prior, which is proportional to the likelihood
-p(x | class). It is used directly as the emission, and the real class prior enters
-through the transitions. Neighbouring probabilities are correlated, so an emission
-weight (tuned on inner folds, never on the left-out subject) sets how much the
-per-epoch evidence counts against the transitions.
+Transitions come from training labels; decoding restarts at every sequence break.
 """
 from __future__ import annotations
 

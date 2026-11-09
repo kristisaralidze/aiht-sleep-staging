@@ -1,15 +1,7 @@
 #!/usr/bin/env python
 """Per-epoch baselines under leave-one-subject-out, plus sensitivity runs.
 
-Outputs:
-    results/tables/baselines.csv              Table 1, one row per model and feature set
-    results/tables/baselines_per_subject.csv  every metric for every left-out subject
-    results/tables/baseline_selection.csv     best baseline, chosen by inner-CV macro F1
-    results/tables/sensitivity.csv            retrained runs vs the full run, same subjects
-    results/predictions/<run>_<subject>.csv   predictions and probabilities
-    results/figures/confusion_<run>.pdf/png   pooled confusion matrices
-    results/logs/folds_<run>.json             tuned parameters per fold
-    results/logs/timing.csv                   compute per run
+Outputs: results/tables/baselines*.csv, baseline_selection.csv, sensitivity.csv
 """
 import argparse
 import sys

@@ -1,10 +1,5 @@
 #!/usr/bin/env python
-"""Check how much of the window model's gain comes from epochs near segment edges.
-
-Near a night's start or end, or a sequence break, a +/-k window repeats the edge
-epoch, which a model could use as a position cue. Both the window model and its
-baseline are scored on all epochs and on interior epochs only, where the whole
-window is real data. k is the window size chosen in each subject's fold.
+"""Score the window model and its baseline on all epochs and on interior epochs only.
 
 Output: results/tables/edge_check.csv
 """

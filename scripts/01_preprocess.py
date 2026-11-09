@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 """Build per-subject epoch features from data/raw into data/processed.
 
-Outputs:
-    data/processed/<subject>.npz        features, labels, feature names, epoch times
-    results/tables/class_balance.csv    epochs per subject and class balance
-    results/logs/01_preprocess.json     seed, config and versions for this run
-    results/logs/env.txt                exact Python and package versions
+Outputs: data/processed/<subject>.npz, results/tables/class_balance.csv
 """
 import argparse
 import sys

@@ -1,20 +1,5 @@
 """Per-epoch features from motion, heart rate and time.
-
-Walch features (count_walch, hr_walch, cosine, time_hours) follow
-github.com/ojwalch/sleep_classifiers. Their counts and heart rate features pool
-a window of +/-285 s around each epoch, so they already carry temporal context.
-The strictly per-epoch features (count_epoch, hr_mean_z, hr_std_epoch) are added
-so context baselines can separate what the window contributes.
-
-Differences from the reference code, none of which change the method:
-counts are stamped at their exact bin centres (the reference spreads them with
-linspace, drifting by up to one bin), counts bins start on the epoch grid, 1 Hz
-grids span the crop interval, and heart rate padding is a plain mirror.
-
-Behaviour kept from the reference code, to stay comparable with it: windows are
-truncated at the ends of the night, so count_walch is centred off the epoch for
-the first and last ~10 epochs; gaps inside the crop are filled by linear
-interpolation, so windows touching a gap see flat heart rate and zero counts.
+Walch features follow github.com/ojwalch/sleep_classifiers; per-epoch features add no context.
 """
 from __future__ import annotations
 
@@ -95,11 +80,7 @@ class FeatureParams:
 
 def activity_counts(times: np.ndarray, z: np.ndarray, start: float, end: float,
                     params: CountParams) -> Tuple[np.ndarray, np.ndarray]:
-    """Convert z-axis acceleration to activity counts.
-
-    Returns the centre time of each count bin and its count. Bins start at
-    `start`, so with an epoch-aligned start two 15 s bins tile each 30 s epoch.
-    """
+    """Return bin centre times and activity counts from z acceleration; bins start at `start`."""
     fs = params.fs_hz
     grid = start + np.arange(int(round((end - start) * fs))) / fs
     resampled = np.interp(grid, times, z)

@@ -15,3 +15,15 @@ forest_all_no_low_rate,02_baselines,29,8,12,498.24,3615.53
 window_forest_local,03_context_baselines,31,8,12,515.35,3672.22
 hmm_forest_all,03_context_baselines,31,8,12,112.66,866.36
 window_forest_all,03_context_baselines,31,8,12,1075.92,8273.86
+gru_all,04_gru,31,8,12,8057.33,58572.08
+gru_all_no_low_coverage,04_gru,30,8,12,7302.3,54012.03
+gru_all_no_low_rate,04_gru,29,8,12,5812.06,42208.67
+forest_motion,05_ablations,31,8,12,144.71,1102.54
+forest_hr,05_ablations,31,8,12,406.16,3126.15
+forest_motion_hr,05_ablations,31,8,12,490.68,3769.41
+window_forest_motion,05_ablations,31,8,12,251.6,1900.32
+window_forest_hr,05_ablations,31,8,12,983.3,7525.28
+window_forest_motion_hr,05_ablations,31,8,12,890.63,6868.43
+gru_motion,05_ablations,31,8,12,1566.93,11276.54
+gru_hr,05_ablations,31,8,12,1547.81,11093.3
+gru_motion_hr,05_ablations,31,8,12,1175.17,8729.02

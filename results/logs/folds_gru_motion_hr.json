@@ -1,0 +1,533 @@
+{
+  "run": "gru_motion_hr",
+  "mean_inner_score": NaN,
+  "folds": {
+    "1066528": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 72
+      },
+      "inner_score": NaN,
+      "seconds": 489.87
+    },
+    "1360686": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 64
+      },
+      "inner_score": NaN,
+      "seconds": 394.14
+    },
+    "1449548": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 40
+      },
+      "inner_score": NaN,
+      "seconds": 256.58
+    },
+    "1455390": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 45
+      },
+      "inner_score": NaN,
+      "seconds": 316.23
+    },
+    "1818471": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 84
+      },
+      "inner_score": NaN,
+      "seconds": 551.67
+    },
+    "2598705": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 35
+      },
+      "inner_score": NaN,
+      "seconds": 309.1
+    },
+    "2638030": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 80
+      },
+      "inner_score": NaN,
+      "seconds": 405.41
+    },
+    "3509524": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 32
+      },
+      "inner_score": NaN,
+      "seconds": 217.37
+    },
+    "3997827": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 69
+      },
+      "inner_score": NaN,
+      "seconds": 364.04
+    },
+    "4018081": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 22
+      },
+      "inner_score": NaN,
+      "seconds": 173.63
+    },
+    "4314139": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 28
+      },
+      "inner_score": NaN,
+      "seconds": 269.57
+    },
+    "4426783": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 14
+      },
+      "inner_score": NaN,
+      "seconds": 175.98
+    },
+    "46343": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 36
+      },
+      "inner_score": NaN,
+      "seconds": 283.42
+    },
+    "5132496": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 19
+      },
+      "inner_score": NaN,
+      "seconds": 162.57
+    },
+    "5383425": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 45
+      },
+      "inner_score": NaN,
+      "seconds": 281.92
+    },
+    "5498603": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 25
+      },
+      "inner_score": NaN,
+      "seconds": 225.73
+    },
+    "5797046": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 42
+      },
+      "inner_score": NaN,
+      "seconds": 307.8
+    },
+    "6220552": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 22
+      },
+      "inner_score": NaN,
+      "seconds": 242.63
+    },
+    "759667": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 83
+      },
+      "inner_score": NaN,
+      "seconds": 431.13
+    },
+    "7749105": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 10
+      },
+      "inner_score": NaN,
+      "seconds": 181.07
+    },
+    "781756": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 19
+      },
+      "inner_score": NaN,
+      "seconds": 168.3
+    },
+    "8000685": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 23
+      },
+      "inner_score": NaN,
+      "seconds": 230.49
+    },
+    "8173033": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 32
+      },
+      "inner_score": NaN,
+      "seconds": 223.96
+    },
+    "8258170": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 48
+      },
+      "inner_score": NaN,
+      "seconds": 318.44
+    },
+    "844359": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 30
+      },
+      "inner_score": NaN,
+      "seconds": 202.07
+    },
+    "8530312": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 25
+      },
+      "inner_score": NaN,
+      "seconds": 249.38
+    },
+    "8686948": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 39
+      },
+      "inner_score": NaN,
+      "seconds": 290.15
+    },
+    "8692923": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 54
+      },
+      "inner_score": NaN,
+      "seconds": 374.94
+    },
+    "9106476": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 32
+      },
+      "inner_score": NaN,
+      "seconds": 261.85
+    },
+    "9618981": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 15
+      },
+      "inner_score": NaN,
+      "seconds": 151.25
+    },
+    "9961348": {
+      "params": {
+        "layers": 1,
+        "input_dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "max_epochs": 150,
+        "patience": 20,
+        "batch_size": 4,
+        "val_fraction": 0.2,
+        "hidden": 64,
+        "dropout": 0.5,
+        "stop_epoch": 36
+      },
+      "inner_score": NaN,
+      "seconds": 218.31
+    }
+  }
+}

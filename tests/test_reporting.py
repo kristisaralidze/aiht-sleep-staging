@@ -71,9 +71,8 @@ def test_upsert_creates_a_missing_table(tmp_path):
     assert path.exists()
 
 
-def test_confusion_figure_written_as_pdf_and_png(tmp_path):
+def test_confusion_figure_written_as_png(tmp_path):
     reporting.save_confusion_figure(_result(), tmp_path)
-    assert (tmp_path / "confusion_run.pdf").stat().st_size > 0
     assert (tmp_path / "confusion_run.png").stat().st_size > 0
 
 

@@ -1,0 +1,16 @@
+               baseline                   model  n_subjects  mean_baseline  mean_model  mean_diff  sd_diff  median_diff  n_improved  n_worse  n_tied  wilcoxon_stat  p_value
+             forest_all       window_forest_all          31         0.4121      0.5426     0.1306   0.1217       0.1247          26        5       0           32.0   0.0000
+             forest_all          hmm_forest_all          31         0.4121      0.4375     0.0254   0.0706       0.0224          20       11       0          145.0   0.0435
+           forest_local     window_forest_local          31         0.3592      0.4319     0.0727   0.0860       0.0786          26        5       0           59.0   0.0001
+             forest_all                 gru_all          31         0.4121      0.4880     0.0759   0.1137       0.0767          24        7       0           82.0   0.0007
+      window_forest_all                 gru_all          31         0.5426      0.4880    -0.0546   0.1508      -0.0633          10       21       0          138.0   0.0305
+         hmm_forest_all                 gru_all          31         0.4375      0.4880     0.0506   0.1440       0.0364          20       11       0          152.0   0.0606
+              forest_hr        forest_motion_hr          31         0.2876      0.3378     0.0502   0.0485       0.0460          27        4       0           35.0   0.0000
+          forest_motion        forest_motion_hr          31         0.1728      0.3378     0.1649   0.1443       0.1895          28        3       0           36.0   0.0000
+       forest_motion_hr              forest_all          31         0.3378      0.4121     0.0743   0.1293       0.0556          25        6       0           52.0   0.0000
+       window_forest_hr window_forest_motion_hr          31         0.4542      0.5151     0.0609   0.0828       0.0506          25        6       0           71.0   0.0003
+   window_forest_motion window_forest_motion_hr          31         0.1930      0.5151     0.3222   0.1628       0.3192          30        1       0            2.0   0.0000
+window_forest_motion_hr       window_forest_all          31         0.5151      0.5426     0.0275   0.0666       0.0151          21       10       0          104.0   0.0039
+                 gru_hr           gru_motion_hr          31         0.4069      0.4400     0.0331   0.0912       0.0304          20       11       0          148.0   0.0502
+             gru_motion           gru_motion_hr          31         0.1851      0.4400     0.2549   0.1675       0.2643          29        2       0            4.0   0.0000
+          gru_motion_hr                 gru_all          31         0.4400      0.4880     0.0481   0.1135       0.0437          19       12       0          143.0   0.0394

@@ -1,10 +1,4 @@
-"""Read the raw sleep-accel text files.
-
-File formats (timestamps are seconds relative to the start of the PSG):
-    motion/<id>_acceleration.txt   "time x y z"  (space separated, g)
-    heart_rate/<id>_heartrate.txt  "time,bpm"
-    labels/<id>_labeled_sleep.txt  "time stage"
-"""
+"""Read the raw sleep-accel text files (timestamps in seconds from PSG start)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -21,11 +15,7 @@ MODALITIES = {
 
 
 def clean_samples(samples: np.ndarray) -> np.ndarray:
-    """Return finite rows sorted by time, keeping the first row per timestamp.
-
-    The watch files contain out-of-order timestamps, and np.interp needs them
-    strictly increasing.
-    """
+    """Return finite rows sorted by time, keeping the first row per timestamp."""
     finite = samples[np.isfinite(samples).all(axis=1)]
     if finite.shape[0] == 0:
         return finite

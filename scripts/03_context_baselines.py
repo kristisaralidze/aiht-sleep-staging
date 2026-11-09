@@ -1,13 +1,7 @@
 #!/usr/bin/env python
-"""Context baselines: +/-k windowed features and HMM smoothing.
+"""Context baselines on the best baseline: +/-k windowed features and HMM smoothing.
 
-Uses the best baseline chosen by script 02 (inner CV only). Its tuned parameters
-are reused per fold, so each row changes one thing: the context.
-
-Outputs:
-    results/tables/context.csv               Table 2, references and context rows
-    results/tables/context_per_subject.csv   every metric for every left-out subject
-    plus predictions, confusion figures, fold logs and timing as in script 02
+Outputs: results/tables/context.csv, context_per_subject.csv
 """
 import argparse
 import sys

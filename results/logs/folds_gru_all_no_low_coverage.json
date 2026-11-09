@@ -1,0 +1,306 @@
+{
+  "run": "gru_all_no_low_coverage",
+  "mean_inner_score": NaN,
+  "folds": {
+    "1066528": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7215360543828284,
+        "stop_epoch": 18
+      },
+      "inner_score": NaN,
+      "seconds": 1525.17
+    },
+    "1360686": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7103832627607022,
+        "stop_epoch": 42
+      },
+      "inner_score": NaN,
+      "seconds": 1808.33
+    },
+    "1449548": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6818142389422736,
+        "stop_epoch": 43
+      },
+      "inner_score": NaN,
+      "seconds": 1565.02
+    },
+    "1455390": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7537414992548223,
+        "stop_epoch": 81
+      },
+      "inner_score": NaN,
+      "seconds": 2567.21
+    },
+    "1818471": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6828843945428952,
+        "stop_epoch": 124
+      },
+      "inner_score": NaN,
+      "seconds": 2127.23
+    },
+    "2598705": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6761217903071454,
+        "stop_epoch": 88
+      },
+      "inner_score": NaN,
+      "seconds": 1662.32
+    },
+    "2638030": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.668759326265969,
+        "stop_epoch": 47
+      },
+      "inner_score": NaN,
+      "seconds": 1801.53
+    },
+    "3509524": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6763538352617582,
+        "stop_epoch": 74
+      },
+      "inner_score": NaN,
+      "seconds": 2156.26
+    },
+    "3997827": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7007580281441806,
+        "stop_epoch": 47
+      },
+      "inner_score": NaN,
+      "seconds": 1487.94
+    },
+    "4018081": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.700802238311502,
+        "stop_epoch": 55
+      },
+      "inner_score": NaN,
+      "seconds": 1692.56
+    },
+    "4314139": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6229210280717449,
+        "stop_epoch": 33
+      },
+      "inner_score": NaN,
+      "seconds": 1668.12
+    },
+    "4426783": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7249370227460092,
+        "stop_epoch": 49
+      },
+      "inner_score": NaN,
+      "seconds": 1541.3
+    },
+    "46343": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6285397294102077,
+        "stop_epoch": 44
+      },
+      "inner_score": NaN,
+      "seconds": 2109.52
+    },
+    "5132496": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6142921564906189,
+        "stop_epoch": 51
+      },
+      "inner_score": NaN,
+      "seconds": 1611.76
+    },
+    "5383425": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6929433636760539,
+        "stop_epoch": 77
+      },
+      "inner_score": NaN,
+      "seconds": 1645.15
+    },
+    "5498603": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.67995117685866,
+        "stop_epoch": 60
+      },
+      "inner_score": NaN,
+      "seconds": 2435.22
+    },
+    "5797046": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6778102559703578,
+        "stop_epoch": 17
+      },
+      "inner_score": NaN,
+      "seconds": 1716.91
+    },
+    "6220552": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6469751886963566,
+        "stop_epoch": 33
+      },
+      "inner_score": NaN,
+      "seconds": 1739.64
+    },
+    "759667": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6526000217145905,
+        "stop_epoch": 53
+      },
+      "inner_score": NaN,
+      "seconds": 2258.43
+    },
+    "781756": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6784560239773137,
+        "stop_epoch": 20
+      },
+      "inner_score": NaN,
+      "seconds": 1359.86
+    },
+    "8000685": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7123117868617337,
+        "stop_epoch": 70
+      },
+      "inner_score": NaN,
+      "seconds": 3006.89
+    },
+    "8173033": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6716246256445991,
+        "stop_epoch": 37
+      },
+      "inner_score": NaN,
+      "seconds": 1226.87
+    },
+    "8258170": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7117470362751493,
+        "stop_epoch": 102
+      },
+      "inner_score": NaN,
+      "seconds": 2699.08
+    },
+    "844359": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.7211578357025347,
+        "stop_epoch": 41
+      },
+      "inner_score": NaN,
+      "seconds": 2027.98
+    },
+    "8530312": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.5500057553698666,
+        "stop_epoch": 5
+      },
+      "inner_score": NaN,
+      "seconds": 1097.13
+    },
+    "8686948": {
+      "params": {
+        "hidden": 64,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6661161138632432,
+        "stop_epoch": 58
+      },
+      "inner_score": NaN,
+      "seconds": 1827.8
+    },
+    "8692923": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.5,
+        "val_macro_f1": 0.6530898705972649,
+        "stop_epoch": 50
+      },
+      "inner_score": NaN,
+      "seconds": 1780.6
+    },
+    "9106476": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.7690404699215553,
+        "stop_epoch": 26
+      },
+      "inner_score": NaN,
+      "seconds": 1315.4
+    },
+    "9618981": {
+      "params": {
+        "hidden": 128,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6416304675016405,
+        "stop_epoch": 16
+      },
+      "inner_score": NaN,
+      "seconds": 1075.98
+    },
+    "9961348": {
+      "params": {
+        "hidden": 32,
+        "dropout": 0.3,
+        "val_macro_f1": 0.6375332772251345,
+        "stop_epoch": 52
+      },
+      "inner_score": NaN,
+      "seconds": 1474.81
+    }
+  }
+}

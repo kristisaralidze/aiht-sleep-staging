@@ -1,0 +1,9 @@
+forest_motion                    folds=31 macro_f1=0.443 kappa=0.173 wall=145s
+forest_hr                        folds=31 macro_f1=0.505 kappa=0.288 wall=406s
+forest_motion_hr                 folds=31 macro_f1=0.564 kappa=0.338 wall=491s
+window_forest_motion             folds=31 macro_f1=0.508 kappa=0.193 wall=252s
+window_forest_hr                 folds=31 macro_f1=0.623 kappa=0.454 wall=983s
+window_forest_motion_hr          folds=31 macro_f1=0.693 kappa=0.515 wall=891s
+gru_motion                       folds=31 macro_f1=0.467 kappa=0.185 wall=1567s
+gru_hr                           folds=31 macro_f1=0.594 kappa=0.407 wall=1548s
+gru_motion_hr                    folds=31 macro_f1=0.621 kappa=0.440 wall=1175s
